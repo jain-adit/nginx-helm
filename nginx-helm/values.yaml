@@ -5,6 +5,8 @@ image:
   pullPolicy: IfNotPresent
   tag: ''
 imagePullSecrets: []
+nameOverride: ''
+fullnameOverride: ''
 
 resources: {}
 commands: []
@@ -23,6 +25,12 @@ ingress:
   annotations: {}
   hosts: []
   tls: []
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
 
 podAnnotations: {}
 podSecurityContext: {}
