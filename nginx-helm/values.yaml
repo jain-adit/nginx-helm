@@ -18,6 +18,7 @@ service:
     - port: 80
       targetPort: 80
       name: port-1
+      nodePort: 32000
 
 ingress:
   enabled: false
